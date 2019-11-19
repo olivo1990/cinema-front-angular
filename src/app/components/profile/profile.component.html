@@ -1,0 +1,34 @@
+<div class="profile-content profile-logo">
+  <button type="button" mat-button [routerLink]="['/inicio']" >
+    <img src="../assets/imgs/logos/logo-netclodx-gris.png" style="width: 50px;" alt="">
+  </button>
+</div>
+<div class="profile-content">
+    <div class="profile-padding">
+      <div class="profile-image">
+        <mat-icon class="profile-ico">person_outline</mat-icon>
+      </div>
+      <div class="profile-text">
+        <div class="profile-nombre">
+          <span style="width: 181px;">{{ nombreUsuario }}</span> <button mat-icon-button [matMenuTriggerFor]="menuuser" style="position: relative;bottom: 3px;">
+            <mat-icon >expand_more</mat-icon>
+          </button>
+        </div>
+        <div class="profile-company">{{ nombreEmpresa }}</div>
+      </div>
+      <mat-menu #menuuser="matMenu">
+        <button mat-menu-item>
+          <mat-icon>security</mat-icon>
+          <span>Cambiar contraseña</span>
+        </button>
+        <button mat-menu-item (click)="cerrarSesion()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Cerrar sesión</span>
+        </button>
+      </mat-menu>
+    </div>
+    <div class="profile-content-button">
+
+      <!--<button mat-stroked-button class="profile-button" (click)="cerrarSesion()">Cerrar sesión</button>-->
+    </div>
+</div>

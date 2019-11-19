@@ -1,0 +1,316 @@
+/* You can add global styles to this file, and also import other style files */
+/* Body */
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f4f9fb!important; }
+
+.primary {
+    color: #037cad!important;
+}
+
+.border-primary{
+    color: #037cad!important;
+}
+
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary{
+  background-color: #397b9f!important;
+}
+
+.mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary{
+  color: #037cad!important;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.warning-snackbar {
+
+  background: #ffc107!important;
+  color: #fbf9f9!important;
+  font-weight: bold;
+
+}
+
+.success-snackbar{
+  background: #28a745!important;
+  color: #fbf9f9!important;
+  font-weight: bold;
+}
+
+.mat-simple-snackbar-action{
+  color: #fff!important;
+}
+
+.color-light-link{
+  color: rgb(6, 123, 173)!important;
+  font-size: 14px;
+}
+
+.color-light-link:hover{
+  color: rgb(8, 167, 234)!important;
+}
+
+.color-light-link:active{
+  color: rgb(6, 123, 173)!important;
+}
+
+.position-icon{
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  top: 3px;
+}
+
+.color-dark{
+  color:#484848!important;
+}
+
+.color-light{
+  color: rgb(6, 123, 173)!important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.max-width-card-material {
+  width: auto;
+  margin: 0 auto;
+}
+
+.max-width-card {
+  max-height: auto;
+  overflow-y: auto;
+}
+
+@media (max-width: 1366px) {
+  .max-width-card-material {
+    width: 940px;
+  }
+
+  .max-width-card {
+    height: 561px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .max-width-card {
+    height: 573px;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width-card {
+    height: 429px;
+  }
+}
+
+@media (max-width: 767px) {
+  .max-width-card {
+    height: 322px;
+  }
+}
+
+@media (max-width: 576px) {
+  .max-width-card {
+    height: auto;
+  }
+
+  .card-ocultar{
+    display: none!important;
+  }
+}
+
+.mat-errors{
+  color: #f44336!important;
+  font-size: 75%;
+  margin-top: 13px;
+  position: absolute;
+}
+
+.mat-dialog-container{
+  padding: 0!important;
+  overflow-x: hidden!important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #08b0f7!important;
+}
+
+.mat-drawer-container {
+  background-color: unset!important;
+  color: unset!important;
+}
+
+.profile-content{
+  background-color: #152d3a!important;
+  color: #fff!important;
+}
+
+.profile-content.profile-logo{
+  background-color: #1f4458!important;
+}
+
+.profile-content>.profile-padding>.profile-image{
+  background: #fff!important;
+}
+
+.profile-content>.profile-padding>.profile-image>.profile-ico{
+    color: #484848!important;
+}
+
+.tarjeta{
+  background-color: #fff!important;
+  border-top: 3px solid #9ED3EF!important;
+}
+
+.tarjeta-titulo{
+  color: #444!important;
+}
+
+.tarjeta-titulo.tarjeta-border-bottom {
+  border-color: #f4f4f4!important;
+}
+
+.tarjeta-cuerpo.tarjeta-border-left-right {
+  border-color: #f4f4f4!important;
+}
+
+.example-sidenav{
+  background-color: #1f4457!important;
+}
+
+.mat-toolbar.mat-primary {
+  background: #397b9f!important;
+  color: #fff!important;
+}
+
+.overlay-animation {
+    background-color: #f4f9fb!important; /* Black background with opacity */
+}
+
+.footer-component{
+  border-color: #f4f4f4!important;
+  color: rgb(72, 72, 72)!important;
+  background: #fff!important;
+}
+
+.titulo-modal{
+  border-color: #e6e6e6!important;
+}
+
+.cuerpo-modal-alert{
+  color: #696969!important;
+}
+
+.content-body{
+  padding: 5px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-body>.form-content{
+  background-color: #ffffff!important;
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+  top: 5px;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+  border: 1px solid #dadada;
+}
+
+.form-content>.title-form{
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 8px 20px;
+  color: rgb(32, 32, 32);
+  background: rgb(236, 236, 236);
+}
+
+.form-body{
+  padding: 20px 20px;
+}
+
+.form-field{
+  width: 90%;
+}
+
+.profile-company{
+  color: #9ed3ef!important;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-ripple, .mat-list-base .mat-list-option .mat-list-item-ripple {
+  /*border-bottom: 1px solid #9ED3EF!important;*/
+  border-bottom: none!important;
+}
+
+.mat-list-base {
+  padding-top: 0!important;
+}
+
+.mat-menu-item .mat-icon-no-color, .mat-menu-item-submenu-trigger::after {
+  color: rgb(72, 72, 72)!important;
+}
+
+.anml-data{
+  font-size: 13px;
+}
+
+.amml-icon{
+  font-size: 21px;
+}
+
+.icon-global{
+  color:#484848;
+}
+
+.icon-button{
+  font-size: 21px;
+}
+.mat-button-icono-volver{
+  padding-left: 5px!important;
+  padding-right: 12px!important;
+}

@@ -1,0 +1,54 @@
+.profile-content{
+  text-align: center;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 16px;
+  justify-content: center;
+}
+
+.profile-content>.profile-padding{
+  padding-top: 15px;
+}
+
+.profile-text{
+  text-align: left;
+  position: relative;
+  left: 10px;
+  width: 181px;
+}
+.profile-content>.profile-padding>.profile-image{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  float: left;
+}
+.profile-content>.profile-padding>.profile-image>.profile-ico{
+  font-size: 40px;
+  position: relative;
+  right: 8px;
+  bottom: 4px;
+}
+
+.profile-nombre{
+
+}
+
+.profile-company{
+  font-size: 12px;
+  position: relative;
+  bottom: 12px;
+}
+
+.profile-content>.profile-content-button{
+  width: 100%;
+  padding: 5px;
+}
+
+.profile-content>.profile-content-button>.profile-button{
+  font-size: 14px;
+}

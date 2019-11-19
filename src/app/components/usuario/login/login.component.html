@@ -1,0 +1,47 @@
+  <div class="text-center logo-login" style="position: relative;top: 17px;">
+    <img src="../../../../assets/imgs/logos/netclodx_logo_nube_letras.png" alt="" style="width:310px">
+  </div>
+
+  <div class="mx-auto my-2 p-4">
+
+      <h1 class="mat-h2 text-left color-dark">{{ titulo }}</h1>
+      <form method="post">
+
+          <div class="example-container">
+              <mat-form-field class="example-full-width">
+                  <mat-icon matPrefix class="rellenar color-dark" [ngStyle]="{'color':!usuarioFormControl.hasError('required') ? '#f44236' : '#484848' }">person</mat-icon>
+                  <input [(ngModel)]="usuario.username" type="text" name="usuario" id="usuario" matInput placeholder="Usuario" required [formControl]="usuarioFormControl" [errorStateMatcher]="matcher">
+                  <mat-error *ngIf="usuarioFormControl.hasError('required')">
+                      El usuario es <strong>requerido</strong>
+                  </mat-error>
+              </mat-form-field>
+          </div>
+
+          <div class="example-container">
+              <mat-form-field>
+                  <mat-icon matPrefix class="rellenar color-dark">lock</mat-icon>
+                  <input [(ngModel)]="usuario.password" [type]="hide ? 'password' : 'text'" name="password" id="password" matInput placeholder="Password" required [formControl]="passwordFormControl" [errorStateMatcher]="matcher">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon matSuffix class="color-dark">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                  <mat-error *ngIf="passwordFormControl.hasError('required')">
+                      El password es <strong>requerido</strong>
+                  </mat-error>
+              </mat-form-field>
+          </div>
+
+          <div class="example-container my-3">
+              <button mat-raised-button color="primary" (click)='login()' type="submit">Ingresar</button>
+          </div>
+
+          <div class="row">
+              <div class="col color-dark" style="font-size: 12px;">
+                  <mat-checkbox>Recordar password</mat-checkbox>
+              </div>
+              <div class="col text-right">
+                  <a [routerLink]="['/recover']" class="badge badge-light color-dark">¿Se te olvidó la contraseña?</a>
+              </div>
+          </div>
+
+      </form>
+  </div>

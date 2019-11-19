@@ -1,0 +1,12 @@
+.titulo-modal-alert{
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.cuerpo-modal-alert{
+    padding: 10px;
+}
+
+.boton-modal-alert{
+    width: 100%;
+}
