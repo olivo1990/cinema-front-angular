@@ -40,7 +40,7 @@ export class MenuServiceService {
   }
 
   consultarMenu(idPerfil: number):Observable<Menu>{
-    const urlEndpoint = this.urlEndPoint+'/api/usuarios/buscar-menu';
+    const urlEndpoint = this.urlEndPoint+'/listar-menu';
     let params = new URLSearchParams();
     params.set('idPerfil', ""+idPerfil);
 

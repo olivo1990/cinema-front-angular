@@ -13,7 +13,7 @@ export class ProfileComponent implements OnInit {
   private usuario:Usuario;
   public nombreUsuario:string;
   public iconoExpand:boolean;
-  public nombreEmpresa:string = "Movilbox S.A.S";
+  public nombreEmpresa:string = "";
 
   constructor(private authService: UsuarioService,private router: Router) {
     this.usuario = new Usuario();

@@ -1,0 +1,59 @@
+<div class="content-body">
+    <div class="form-content" style="width:70%">
+        <div class="title-form">Parametros de búsqueda</div>
+        <form method="post" name="form" (ngSubmit)="f.form.valid && guardar()" #f="ngForm">
+            <div class="form-body">
+
+                <div class="example-container">
+                    <mat-form-field appearance="outline" style="width: 70%;">
+                        <mat-label>Nombre</mat-label>
+                        <input [(ngModel)]="sucursal.descripcion" type="text" name="nombre" id="nombre" matInput placeholder="Nombre" [formControl]="descripcion">
+                        <mat-error *ngIf="descripcion.hasError('required')">
+                            La descripción es <strong>requerida</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="example-container">
+                    <mat-form-field appearance="outline" style="width: 70%;">
+                        <mat-label>Dirección</mat-label>
+                        <input [(ngModel)]="sucursal.direccion" type="text" name="cedula" id="cedula" matInput placeholder="Dirección" [formControl]="direccion">
+                        <mat-error *ngIf="direccion.hasError('required')">
+                            La dirección es <strong>requerida</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="example-container">
+                  <mat-form-field appearance="outline" style="width: 70%;">
+                    <mat-select placeholder="Selecionar administrador" [(ngModel)]="sucursal.idSupervisor" name="admin" [formControl]="administrador">
+                      <mat-option value="option">--- selecionar un administrador ---</mat-option> 
+                      <mat-option *ngFor="let usuario of usuarios" [value]="usuario.id">{{usuario.nombre}} {{usuario.apellido}}</mat-option> 
+                    </mat-select>
+                    <mat-error *ngIf="administrador.hasError('required')">
+                        El administrador es <strong>requerido</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="example-container">
+                    <mat-form-field appearance="outline" style="width: 70%;">
+                      <mat-select placeholder="Selecionar ciudad" [(ngModel)]="sucursal.ciudad" name="ciudad" [formControl]="ciudad">
+                        <mat-option value="option">--- selecionar una ciudad ---</mat-option> 
+                        <mat-option *ngFor="let ciudad of ciudades" [value]="ciudad">{{ciudad.nombre}}</mat-option> 
+                      </mat-select>
+                      <mat-error *ngIf="ciudad.hasError('required')">
+                        La ciudad es <strong>requerida</strong>
+                      </mat-error>
+                    </mat-form-field>
+                </div>
+          
+                <div class="example-container my-3">
+                    <button mat-raised-button color="primary" type="submit">Guardar</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -1,5 +1,5 @@
   <div class="text-center logo-login" style="position: relative;top: 17px;">
-    <img src="../../../../assets/imgs/logos/netclodx_logo_nube_letras.png" alt="" style="width:310px">
+    Cinema
   </div>
 
   <div class="mx-auto my-2 p-4">
@@ -10,7 +10,7 @@
           <div class="example-container">
               <mat-form-field class="example-full-width">
                   <mat-icon matPrefix class="rellenar color-dark" [ngStyle]="{'color':!usuarioFormControl.hasError('required') ? '#f44236' : '#484848' }">person</mat-icon>
-                  <input [(ngModel)]="usuario.username" type="text" name="usuario" id="usuario" matInput placeholder="Usuario" required [formControl]="usuarioFormControl" [errorStateMatcher]="matcher">
+                  <input [(ngModel)]="usuario.username" type="text" name="usuario" id="usuario" matInput placeholder="Usuario" required [formControl]="usuarioFormControl">
                   <mat-error *ngIf="usuarioFormControl.hasError('required')">
                       El usuario es <strong>requerido</strong>
                   </mat-error>
@@ -20,7 +20,7 @@
           <div class="example-container">
               <mat-form-field>
                   <mat-icon matPrefix class="rellenar color-dark">lock</mat-icon>
-                  <input [(ngModel)]="usuario.password" [type]="hide ? 'password' : 'text'" name="password" id="password" matInput placeholder="Password" required [formControl]="passwordFormControl" [errorStateMatcher]="matcher">
+                  <input [(ngModel)]="usuario.password" [type]="hide ? 'password' : 'text'" name="password" id="password" matInput placeholder="Password" required [formControl]="passwordFormControl">
                   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                       <mat-icon matSuffix class="color-dark">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                   </button>

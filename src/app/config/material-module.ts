@@ -13,6 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
 
@@ -30,7 +31,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSidenavModule,
     MatToolbarModule,
     MatMenuModule,
-    MatTreeModule
+    MatTreeModule,
+    MatSelectModule
   ]
 })
 

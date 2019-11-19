@@ -1,0 +1,49 @@
+<div class="content-body">
+    <div class="form-content" style="width:70%">
+        <div class="title-form">Parametros de búsqueda</div>
+        <form method="post" name="form" (ngSubmit)="f.form.valid && guardar()" #f="ngForm">
+            <div class="form-body">
+
+                <div class="example-container">
+                  <mat-form-field appearance="outline" style="width: 70%;">
+                    <mat-select placeholder="Selecionar sucursal" [(ngModel)]="salaCine.sucursal" name="admin" [formControl]="sucursal">
+                      <mat-option value="option">--- selecionar una sucursal ---</mat-option> 
+                      <mat-option *ngFor="let sucursal of sucursales" [value]="sucursal">{{sucursal.descripcion}}</mat-option> 
+                    </mat-select>
+                    <mat-error *ngIf="sucursal.hasError('required')">
+                        La sucursal es <strong>requerida</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="example-container">
+                    <mat-form-field appearance="outline" style="width: 70%;">
+                      <mat-select placeholder="Selecionar formato" [(ngModel)]="salaCine.idTipoFormato" name="ciudad" [formControl]="formato">
+                        <mat-option value="option">--- selecionar un formato ---</mat-option> 
+                        <mat-option *ngFor="let formato of tipoFormatos" [value]="formato.id">{{formato.descripcion}}</mat-option> 
+                      </mat-select>
+                      <mat-error *ngIf="formato.hasError('required')">
+                        El formato es <strong>requerido</strong>
+                      </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="example-container">
+                    <mat-form-field appearance="outline" style="width: 70%;">
+                        <mat-label>Número de filas</mat-label>
+                        <input [(ngModel)]="salaCine.nroFilas" type="number" min="1" max="27" matInput placeholder="Numero de filas" [formControl]="nroFilas">
+                        <mat-error *ngIf="nroFilas.hasError('required')">
+                            La descripción es <strong>requerida</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+          
+                <div class="example-container my-3">
+                    <button mat-raised-button color="primary" type="submit">Guardar</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+

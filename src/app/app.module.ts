@@ -19,11 +19,10 @@ import { LoginComponent } from './components/usuario/login/login.component';
 import { AlertDialogComponent } from './components/dialog/alert-dialog/alert-dialog.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './components/inicio/inicio.component';
-import { GestorUsuarioComponent } from './components/usuario/gestor-usuario/gestor-usuario.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { PersonalComponent } from './components/empleado/personal.component';
-import { FormComponent } from './components/empleado/form/form.component';
+import { SucursalesComponent } from './components/sucursales/sucursales.component';
+import { SalasCineComponent } from './components/salas-cine/salas-cine.component';
 
 
 @NgModule({
@@ -33,11 +32,10 @@ import { FormComponent } from './components/empleado/form/form.component';
     AlertDialogComponent,
     FooterComponent,
     InicioComponent,
-    GestorUsuarioComponent,
     MenuComponent,
     ProfileComponent,
-    PersonalComponent,
-    FormComponent
+    SucursalesComponent,
+    SalasCineComponent,
   ],
   imports: [
     BrowserAnimationsModule,

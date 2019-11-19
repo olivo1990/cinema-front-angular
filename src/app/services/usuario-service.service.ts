@@ -31,17 +31,6 @@ export class UsuarioService {
     return this._usuario;
   }
 
-  /*public get usuario(): Usuario {
-
-    if (this._usuario != null) {
-      return this._usuario;
-    } else if (this._usuario == null && sessionStorage.getItem('usuario') != null) {
-      this._usuario = JSON.parse(sessionStorage.getItem('usuario')) as Usuario;
-      return this._usuario;
-    }
-    return new Usuario();
-  }*/
-
   public get token(): string {
     if (this._token != null) {
       return this._token;
@@ -52,35 +41,8 @@ export class UsuarioService {
     return null;
   }
 
-
-  /*registrar(usuario: Usuario): Usuario {
-
-    this.usuario = usuario;
-
-    return this.usuario;
-  }*/
-
-  registrar(usuario: Usuario): Observable<Usuario> {
-
-    return this.http.post(`${this.urlEndPoint}/api/usuarios/registrar`, usuario, { })
-      .pipe(
-        map((response: any) => response.usuario as Usuario),
-        catchError(e => {
-
-          if (e.status == 400) {
-            return throwError(e);
-          }
-
-          if(e.error.mensaje){
-            console.log(e.error.mensaje);
-          }
-          return throwError(e);
-        })
-      );
-   }
-
    login(usuario: Usuario): Observable<any> {
-    const urlEndpoint = this.urlEndPoint+'/oauth/token';
+    const urlEndpoint = 'http://localhost:8080/oauth/token';
 
     const credenciales = btoa('angularapp' + ':' + '12345');
 
@@ -103,7 +65,6 @@ export class UsuarioService {
     this._usuario.id = payload.id;
     this._usuario.nombre = payload.nombre;
     this._usuario.apellido = payload.apellido;
-    this._usuario.correo = payload.email;
     this._usuario.username = payload.user_name;
     this._usuario.idPerfil = payload.idPerfil;
     sessionStorage.setItem('usuario', JSON.stringify(this._usuario));
@@ -129,13 +90,6 @@ export class UsuarioService {
     }
     return false;
   }
-
-  /*hasRole(role: string): boolean {
-    if (this._usuario.perfiles.includes(role)) {
-      return true;
-    }
-    return false;
-  }*/
 
   logout(): void {
     this._token = null;
